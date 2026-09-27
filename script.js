@@ -47,7 +47,7 @@ async function loadPosts() {
 async function fetchPosts() {
   const response = await fetch(API_URL);
 
-  // fetch only rejects on network failure, so check the status ourselves.
+  // fetch only rejects on network failure
   if (!response.ok) {
     throw new Error(`The server responded with ${response.status}.`);
   }
